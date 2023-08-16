@@ -1,0 +1,58 @@
+---
+title: Next.js
+description: Adding dark mode to your next app.
+---
+
+## Dark mode
+
+<Steps>
+
+### Wrap your root layout
+
+Add the `ThemeProvider` to your root layout.
+
+```tsx {4,10-12} title="app/layout.tsx"
+import "@bigcomponents/core/styles.css";
+import "../styles/globals.css";
+
+import { ThemeProvider } from "@bigcomponents/core/next";
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+### Add a mode toggle
+
+Import mode toggle to toggle between light and dark mode.
+
+```tsx {2,13} title="components/header.tsx"
+import Link from "next/link";
+import { ModeToggle } from "@bigcomponents/core/next";
+
+export default function Header() {
+  return (
+    <header className="flex border-b bg-white dark:bg-gray-950 dark:border-gray-800 items-center h-[60px] sticky top-0 z-50">
+      <div className="container flex items-center justify-between w-full px-2 mx-auto">
+        <Link href="/" className="text-lg font-black">
+          BigComponents
+        </Link>
+
+        <div className="flex items-center gap-4">
+          <ModeToggle />
+        </div>
+      </div>
+    </header>
+  );
+}
+```
+
+</Steps>

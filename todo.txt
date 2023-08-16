@@ -1,0 +1,12 @@
+///// TODO /////
+
+- Improve the textarea component
+- Check the functionality of the useInputState hook
+- Detail in the documentation that it is necessary to make changes in the globals.css and tailwind.config.js
+- Add changeset
+- Add testing
+- Change LOGO
+
+Changes in components:
+- dropdown-menu.tsx: export the type DropdownMenuTriggerProps
+- tabs.tsx: TabsList add the className -> "h-9"

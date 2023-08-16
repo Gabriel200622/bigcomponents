@@ -1,0 +1,55 @@
+---
+title: Badge
+component: true
+description: Displays a badge or a component that looks like a badge.
+---
+
+<ComponentPreview name="badge-demo" />
+
+## Usage
+
+```tsx
+import { Badge } from "@bigcomponents/core";
+```
+
+```tsx
+<Badge variant="outline">Badge</Badge>
+```
+
+### Link
+
+You can use the `badgeVariants` helper to create a link that looks like a badge.
+
+```tsx
+import { badgeVariants } from "@bigcomponents/core";
+```
+
+```tsx
+<Link href="/" className={badgeVariants({ variant: "outline" })}>
+  Badge
+</Link>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview name="badge-demo" />
+
+---
+
+### Secondary
+
+<ComponentPreview name="badge-secondary" />
+
+---
+
+### Outline
+
+<ComponentPreview name="badge-outline" />
+
+---
+
+### Destructive
+
+<ComponentPreview name="badge-destructive" />

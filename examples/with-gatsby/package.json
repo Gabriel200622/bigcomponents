@@ -1,0 +1,35 @@
+{
+  "name": "with-gatsby",
+  "version": "1.0.0",
+  "private": true,
+  "description": "with-gatsby",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@bigcomponents/core": "workspace:^",
+    "@bigcomponents/hooks": "workspace:^",
+    "autoprefixer": "^10.4.15",
+    "gatsby": "^5.11.0",
+    "gatsby-plugin-postcss": "^6.11.0",
+    "postcss": "^8.4.28",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-animate": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "typescript": "^5.1.6"
+  }
+}

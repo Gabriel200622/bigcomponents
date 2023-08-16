@@ -1,0 +1,130 @@
+{
+  "name": "@bigcomponents/core",
+  "version": "1.0.2",
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles.css": "./dist/index.css",
+    "./lucide": {
+      "types": "./dist/lucide/index.d.ts",
+      "import": "./dist/lucide/index.mjs",
+      "require": "./dist/lucide/index.js"
+    },
+    "./heroicons/solid": {
+      "types": "./dist/heroicons/solid/index.d.ts",
+      "import": "./dist/heroicons/solid/index.mjs",
+      "require": "./dist/heroicons/solid/index.js"
+    },
+    "./heroicons/outline": {
+      "types": "./dist/heroicons/outline/index.d.ts",
+      "import": "./dist/heroicons/outline/index.mjs",
+      "require": "./dist/heroicons/outline/index.js"
+    },
+    "./radix": {
+      "types": "./dist/radix/index.d.ts",
+      "import": "./dist/radix/index.mjs",
+      "require": "./dist/radix/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.mjs",
+      "require": "./dist/react/index.js"
+    },
+    "./next": {
+      "types": "./dist/next/index.d.ts",
+      "import": "./dist/next/index.mjs",
+      "require": "./dist/next/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "lucide": [
+        "dist/lucide"
+      ],
+      "heroicons/solid": [
+        "dist/heroicons/solid"
+      ],
+      "heroicons/outline": [
+        "dist/heroicons/outline"
+      ],
+      "radix": [
+        "dist/radix"
+      ],
+      "react": [
+        "dist/react"
+      ],
+      "next": [
+        "dist/next"
+      ]
+    }
+  },
+  "main": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "check-types": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.7",
+    "autoprefixer": "10.4.14",
+    "eslint": "^7.32.0",
+    "postcss": "^8.4.20",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.3.3",
+    "tsup": "^6.1.3",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@hookform/resolvers": "^3.2.0",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-alert-dialog": "^1.0.4",
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
+    "@radix-ui/react-avatar": "^1.0.3",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-collapsible": "^1.0.3",
+    "@radix-ui/react-context-menu": "^2.1.4",
+    "@radix-ui/react-dialog": "^1.0.4",
+    "@radix-ui/react-dropdown-menu": "^2.0.5",
+    "@radix-ui/react-hover-card": "^1.0.6",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-menubar": "^1.0.3",
+    "@radix-ui/react-navigation-menu": "^1.1.3",
+    "@radix-ui/react-popover": "^1.0.6",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-radio-group": "^1.1.3",
+    "@radix-ui/react-scroll-area": "^1.0.4",
+    "@radix-ui/react-select": "^1.2.2",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slider": "^1.1.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.4",
+    "@radix-ui/react-tooltip": "^1.0.6",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "cmdk": "^0.2.0",
+    "date-fns": "^2.30.0",
+    "lucide-react": "^0.263.1",
+    "next-themes": "^0.2.1",
+    "react-day-picker": "^8.8.0",
+    "react-hook-form": "^7.45.4",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.6",
+    "zod": "^3.21.4"
+  }
+}

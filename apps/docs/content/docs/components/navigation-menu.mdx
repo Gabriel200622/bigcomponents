@@ -1,0 +1,57 @@
+---
+title: Navigation Menu
+component: true
+description: A collection of links for navigating websites.
+---
+
+<ComponentPreview name="navigation-menu-demo" />
+
+## Usage
+
+```tsx
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@bigcomponents/core";
+```
+
+```tsx
+<NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <NavigationMenuLink>Link</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
+```
+
+## Examples
+
+### Link Component
+
+When using the Next.js `<Link />` component, you can use `navigationMenuTriggerStyle()` to apply the correct styles to the trigger.
+
+```tsx
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+```
+
+```tsx {3-5}
+<NavigationMenuItem>
+  <Link href="/docs" legacyBehavior passHref>
+    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+      Documentation
+    </NavigationMenuLink>
+  </Link>
+</NavigationMenuItem>
+```
+
+See also the [Radix UI documentation](https://www.radix-ui.com/docs/primitives/components/navigation-menu#with-client-side-routing) for handling client side routing.

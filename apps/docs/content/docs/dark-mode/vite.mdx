@@ -1,0 +1,52 @@
+---
+title: Vite or Create React App
+description: Adding dark mode to your vite app.
+---
+
+## Dark mode
+
+<Steps>
+
+### Wrap your root layout
+
+Add the `ThemeProvider` to your root layout.
+
+```tsx {7,11-13} title="src/main.tsx"
+import "@bigcomponents/core/styles.css";
+import "./styles/index.css";
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import { ThemeProvider } from "@bigcomponents/core/react";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <App />
+    </ThemeProvider>
+  </React.StrictMode>
+);
+```
+
+### Add a mode toggle
+
+Import mode toggle to toggle between light and dark mode.
+
+```tsx {1,9} title="src/components/header.tsx"
+import { ModeToggle } from "@bigcomponents/core/react";
+
+export default function Header() {
+  return (
+    <header className="flex items-center h-[60px] justify-between px-5 border-b">
+      <div>Logo</div>
+
+      <div className="flex items-center gap-4">
+        <ModeToggle />
+      </div>
+    </header>
+  );
+}
+```
+
+</Steps>

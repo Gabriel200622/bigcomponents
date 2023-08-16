@@ -1,0 +1,33 @@
+---
+title: Alert
+component: true
+description: Displays a callout for user attention.
+---
+
+<ComponentPreview name="alert-demo" />
+
+## Usage
+
+```tsx
+import { Alert, AlertDescription, AlertTitle } from "@bigcomponents/core";
+```
+
+```tsx
+<Alert>
+  <Terminal className="h-4 w-4" />
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components and dependencies to your app using the cli.
+  </AlertDescription>
+</Alert>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview name="alert-demo" />
+
+### Destructive
+
+<ComponentPreview name="alert-destructive" />

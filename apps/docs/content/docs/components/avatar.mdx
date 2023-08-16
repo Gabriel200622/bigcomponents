@@ -1,0 +1,20 @@
+---
+title: Avatar
+component: true
+description: An image element with a fallback for representing the user.
+---
+
+<ComponentPreview name="avatar-demo" />
+
+## Usage
+
+```tsx
+import { Avatar, AvatarFallback, AvatarImage } from "@bigcomponents/core";
+```
+
+```tsx
+<Avatar>
+  <AvatarImage src="https://github.com/Gabriel200622.png" alt="@biggabo" />
+  <AvatarFallback>BG</AvatarFallback>
+</Avatar>
+```
