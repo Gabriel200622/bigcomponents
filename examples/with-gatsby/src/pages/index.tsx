@@ -13,7 +13,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="mt-10 text-2xl font-bold dark:text-gray-300">
-          Hello World!
+          Gatsby Template
         </h1>
 
         <Button className="mt-5 text-lg" asChild variant="link">
@@ -31,4 +31,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => (
+  <title>BigComponents with Gatsby and Typescript</title>
+);

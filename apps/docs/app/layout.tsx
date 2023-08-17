@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import Header from "../components/header";
+import Footer from "@/components/footer";
 import { Metadata } from "next";
 import { ThemeProvider } from "@bigcomponents/core/next";
 import { Toaster } from "@bigcomponents/core";
@@ -71,12 +72,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${jakarta.className} bg-white dark:bg-gray-950 min-h-screen`}
+        className={`${jakarta.className} bg-background min-h-screen antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-
-          <>{children}</>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="relative flex flex-col min-h-screen">
+            <Header />
+            <div className="flex-1">{children}</div>
+            <Footer />
+          </div>
 
           <Toaster />
         </ThemeProvider>
