@@ -4,7 +4,7 @@ export const siteConfig = {
   ogImage: "https://bigcomponents-docs.vercel.app/og.jpg",
   description: "The all-in-one React components library.",
   links: {
-    github: "https://github.com/Gabriel200622",
+    github: "https://github.com/Gabriel200622/bigcomponents",
   },
 };
 

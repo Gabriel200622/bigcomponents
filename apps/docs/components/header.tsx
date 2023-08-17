@@ -13,8 +13,8 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="flex border-b bg-white dark:bg-gray-950 dark:border-gray-800 items-center h-[60px] sticky top-0 z-50">
-      <div className="container flex items-center justify-between w-full px-4 mx-auto">
+    <header className="flex border-b bg-background items-center h-[60px] sticky top-0 z-50">
+      <div className="container flex items-center justify-between w-full px-2 mx-auto">
         <div className="flex items-center gap-1 md:gap-10">
           <MobileSheet />
 
