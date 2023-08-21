@@ -79,6 +79,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Gatsby",
+          href: "/docs/installation/gatsby",
+          items: [],
+        },
+        {
           title: "Manual",
           href: "/docs/installation/manual",
           items: [],

@@ -16,9 +16,9 @@ const Templates = () => {
             href={template.url}
             target="_blank"
             key={index}
-            className="duration-200 border rounded-md shadow-md hover:border-white"
+            className="overflow-hidden duration-200 border rounded-md shadow-md hover:border-primary"
           >
-            <div className="relative aspect-video">
+            <div className="relative overflow-hidden aspect-video">
               <Image src={template.image} fill alt={template.name} />
             </div>
 
