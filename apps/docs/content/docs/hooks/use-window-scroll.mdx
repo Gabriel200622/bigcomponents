@@ -1,0 +1,20 @@
+---
+title: use-window-scroll
+component: false
+description: Subscribe to window scroll and scroll smoothly to given position
+---
+
+## Usage
+
+use-window-scroll returns current scroll position and a function to scroll smoothly to given position:
+
+<ComponentPreview name="use-window-scroll-demo" />
+
+## Definition
+
+```tsx
+function useWindowScroll(): readonly [
+  { x: number; y: number },
+  (position: { x?: number; y?: number }) => void,
+];
+```

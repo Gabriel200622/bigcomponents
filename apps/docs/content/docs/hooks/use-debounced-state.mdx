@@ -1,0 +1,58 @@
+---
+title: use-debounced-state
+component: false
+description: Debounce value changes with minimal renders
+---
+
+<ComponentPreview name="use-debounced-state-demo" />
+
+## Usage
+
+`use-debounced-state` hook debounces value changes. This can be useful in case you want to perform a heavy operation based on react state, for example, send search request. Unlike [use-debounced-value](/docs/hooks/use-debounced-value) it is designed to work with uncontrolled components.
+
+```tsx
+import { Input } from "@bigcomponents/core";
+import { useDebouncedState } from "@bigcomponents/hooks";
+
+export function useDebouncedStateDemo() {
+  const [value, setValue] = useDebouncedState("", 200);
+
+  return (
+    <div className="w-[650px]">
+      <Input
+        placeholder="Enter value to see debounce effect"
+        defaultValue={value}
+        onChange={(e) => setValue(e.currentTarget.value)}
+      />
+
+      <p className="px-2 mt-2">
+        Debounced value: <span className="font-semibold">{value}</span>
+      </p>
+    </div>
+  );
+}
+```
+
+## Differences to use-debounce-value
+
+- You do not have direct access to the non-debounced value.
+- It is used for uncontrolled inputs (`defaultValue` prop instead of `value`), e.g. does not render with every state change like a character typed in an input.
+- It does not work with custom state providers or props, and it uses `useState` internally.
+
+## Leading update
+
+You can immediately update value with first call with `{ leading: true }` options:
+
+<ComponentPreview name="use-debounced-state-leading" />
+
+## Definition
+
+```tsx
+function useDebouncedState<T = any>(
+  defaultValue: T,
+  wait: number,
+  options?: {
+    leading: boolean;
+  }
+): readonly [T, (newValue: T) => void];
+```

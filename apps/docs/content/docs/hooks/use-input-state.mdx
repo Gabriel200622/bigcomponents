@@ -1,0 +1,53 @@
+---
+title: use-input-state
+component: false
+description: Manage state of native and custom inputs
+---
+
+## Usage
+
+`use-input-state` hook handles state of native inputs (with event in `onChange` handler) and custom inputs (with value in `onChange` handler). Hook works with Input component and native inputs:
+
+```tsx
+import { useState } from "react";
+import { useInputState } from "@bigcomponents/hooks";
+import { Input } from "@bigcomponents/core";
+
+function WithUseInputState() {
+  const [stringValue, setStringValue] = useInputState("");
+
+  return (
+    <>
+      <input type="text" value={stringValue} onChange={setStringValue} />
+      <Input value={stringValue} onChange={setStringValue} />
+    </>
+  );
+}
+
+function WithUseState() {
+  const [stringValue, setStringValue] = useState("");
+  const [numberValue, setNumberValue] = useState(0);
+
+  return (
+    <>
+      <input
+        type="text"
+        value={stringValue}
+        onChange={(event) => setStringValue(event.currentTarget.value)}
+      />
+      <Input
+        value={stringValue}
+        onChange={(event) => setStringValue(event.currentTarget.value)}
+      />
+    </>
+  );
+}
+```
+
+## Definition
+
+```tsx
+function useInputState<T>(
+  initialState: T
+): [T, (value: null | undefined | T | React.ChangeEvent<any>) => void];
+```

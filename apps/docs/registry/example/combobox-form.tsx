@@ -76,12 +76,12 @@ export default function ComboboxForm() {
                       role="combobox"
                       className={cn(
                         "w-[200px] justify-between",
-                        !field.value && "text-muted-foreground"
+                        !field.value && "text-muted-foreground",
                       )}
                     >
                       {field.value
                         ? languages.find(
-                            (language) => language.value === field.value
+                            (language) => language.value === field.value,
                           )?.label
                         : "Select language"}
                       <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
@@ -106,7 +106,7 @@ export default function ComboboxForm() {
                               "mr-2 h-4 w-4",
                               language.value === field.value
                                 ? "opacity-100"
-                                : "opacity-0"
+                                : "opacity-0",
                             )}
                           />
                           {language.label}

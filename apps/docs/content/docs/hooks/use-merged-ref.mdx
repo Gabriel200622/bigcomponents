@@ -1,0 +1,62 @@
+---
+title: use-merged-ref
+component: false
+description: Use multiple refs for one dom node
+---
+
+## Usage
+
+`use-merged-ref` accepts any amount of refs and returns a function that should be passed to dom node. Use this hook when you need to use more than one ref on single dom node, for example, when you want to use [use-click-outside](/docs/hooks/use-click-outside) and [use-focus-trap](/docs/hooks/use-focus-trap) hooks and also get a ref for yourself:
+
+```tsx
+import { useRef } from "react";
+import {
+  useClickOutside,
+  useFocusTrap,
+  useMergedRef,
+} from "@bigcomponents/hooks";
+
+function Demo() {
+  const myRef = useRef();
+  const useClickOutsideRef = useClickOutside(() => {});
+  const focusTrapRef = useFocusTrap();
+  const mergedRef = useMergedRef(myRef, useClickOutsideRef, focusTrapRef);
+
+  return <div ref={mergedRef} />;
+}
+```
+
+## mergeRefs function
+
+`useMergedRef` hooks memoizes refs with `useCallback` hook, but in some cases memoizing is not a valid strategy, for example, when you are working with a list of dynamic components React will complain that different amount of hooks was called across two renders. To fix that issue use `mergeRefs` function instead:
+
+```tsx
+import { useRef } from "react";
+import { useClickOutside, mergeRefs } from "@bigcomponents/hooks";
+
+function Demo() {
+  const myRef = useRef();
+  const useClickOutsideRef = useClickOutside(() => {});
+  const mergedRef = mergeRefs(myRef, useClickOutsideRef);
+
+  return <div ref={mergedRef} />;
+}
+```
+
+`mergeRefs` works the same way as `useMergedRef` but does not use hooks internally. Use it only when you cannot use `useMergedRef`. Note that `mergeRefs` will not work correctly with [use-focus-trap](/docs/hooks/use-focus-trap) hook, you are required to use `useMergedRef` with it.
+
+# TypeScript
+
+## Definition
+
+```tsx
+function useMergedRef<T = any>(
+  ...refs: React.ForwardedRef<T>[]
+): (node: T) => void;
+```
+
+## Set node type
+
+```tsx
+useMergedRef<HTMLDivElement>();
+```

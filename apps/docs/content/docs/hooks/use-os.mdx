@@ -1,0 +1,28 @@
+---
+title: use-os
+component: false
+description: Get user os
+---
+
+## Usage
+
+use-os detects user's os. Possible values are: `undetermined`, `macos`, `ios`, `windows`, `android`, `linux`. If os cannot be identified, for example, during server side rendering `undetermined` will be returned.
+
+<ComponentPreview name="use-os-demo" />
+
+## TypeScript
+
+You can import OS union type from @bigcomponents/hooks:
+
+```tsx
+import type { OS } from "@bigcomponents/hooks";
+// OS type is 'undetermined' | 'macos' | 'ios' | 'windows' | 'android' | 'linux'
+```
+
+## Definition
+
+```tsx
+function getOS(options?: {
+  getValueInEffect: boolean;
+}): "undetermined" | "macos" | "ios" | "windows" | "android" | "linux";
+```

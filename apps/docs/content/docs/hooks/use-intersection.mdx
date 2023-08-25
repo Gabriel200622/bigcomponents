@@ -1,0 +1,44 @@
+---
+title: use-intersection
+component: false
+description: Get information about intersection of given element with its scroll container
+---
+
+## Usage
+
+`use-intersection` gets information about the intersection of a given element with its scroll container or body element with [Intersection Observer API:](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+
+<ComponentPreview name="use-intersection-demo" />
+
+## API
+
+Hook accepts `IntersectionObserver`'s options as its only optional argument:
+
+```tsx
+useIntersection({
+  root: someDomElement,
+  rootMargin: "0rem",
+  threshold: 1.0,
+});
+```
+
+Hook returns `ref` function that should be passed to the observed element, and the latest entry, as returned by `IntersectionObserver`'s callback. See [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) documentation to learn everything about options.
+
+On the first render (as well as during SSR), or when no element is being observed, the entry is `null`.
+
+```tsx
+const { ref, entry } = useIntersection();
+
+<div ref={ref}>Observed</div>;
+```
+
+## Definition
+
+```tsx
+function useIntersection<T extends HTMLElement = any>(
+  options?: ConstructorParameters<typeof IntersectionObserver>[1]
+): {
+  ref: (element: T | null) => void;
+  entry: IntersectionObserverEntry;
+};
+```

@@ -605,5 +605,258 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/example/tooltip-demo")),
       files: ["registry/example/tooltip-demo.tsx"],
     },
+    "use-debounced-state-demo": {
+      name: "use-debounced-state",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-debounced-state-demo")
+      ),
+      files: ["registry/example/use-debounced-state-demo.tsx"],
+    },
+    "use-debounced-state-leading": {
+      name: "use-debounced-state-leading",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-debounced-state-leading")
+      ),
+      files: ["registry/example/use-debounced-state-leading.tsx"],
+    },
+    "use-debounced-value-demo": {
+      name: "use-debounced-value",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-debounced-value-demo")
+      ),
+      files: ["registry/example/use-debounced-value-demo.tsx"],
+    },
+    "use-debounced-value-leading": {
+      name: "use-debounced-value-leading",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-debounced-value-leading")
+      ),
+      files: ["registry/example/use-debounced-value-leading.tsx"],
+    },
+    "use-debounced-value-cancel": {
+      name: "use-debounced-value-cancel",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-debounced-value-cancel")
+      ),
+      files: ["registry/example/use-debounced-value-cancel.tsx"],
+    },
+    "use-idle-demo": {
+      name: "use-idle",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(() => import("@/registry/example/use-idle-demo")),
+      files: ["registry/example/use-idle-demo.tsx"],
+    },
+    "use-interval-demo": {
+      name: "use-interval",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-interval-demo")
+      ),
+      files: ["registry/example/use-interval-demo.tsx"],
+    },
+    "use-list-state-demo": {
+      name: "use-list-state",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-list-state-demo")
+      ),
+      files: ["registry/example/use-list-state-demo.tsx"],
+    },
+    "use-toggle-demo": {
+      name: "use-toggle",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(() => import("@/registry/example/use-toggle-demo")),
+      files: ["registry/example/use-toggle-demo.tsx"],
+    },
+    "use-click-outside-demo": {
+      name: "use-click-outside",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-click-outside-demo")
+      ),
+      files: ["registry/example/use-click-outside-demo.tsx"],
+    },
+    "use-color-scheme-demo": {
+      name: "use-color-scheme",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-color-scheme-demo")
+      ),
+      files: ["registry/example/use-color-scheme-demo.tsx"],
+    },
+    "use-element-size-demo": {
+      name: "use-element-size",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-element-size-demo")
+      ),
+      files: ["registry/example/use-element-size-demo.tsx"],
+    },
+    "use-fullscreen-demo": {
+      name: "use-fullscreen",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-fullscreen-demo")
+      ),
+      files: ["registry/example/use-fullscreen-demo.tsx"],
+    },
+    "use-fullscreen-custom-root": {
+      name: "use-fullscreen-custom-root",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-fullscreen-custom-root")
+      ),
+      files: ["registry/example/use-fullscreen-custom-root.tsx"],
+    },
+    "use-hotkeys-demo": {
+      name: "use-hotkeys",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-hotkeys-demo")
+      ),
+      files: ["registry/example/use-hotkeys-demo.tsx"],
+    },
+    "use-hover-demo": {
+      name: "use-hover",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(() => import("@/registry/example/use-hover-demo")),
+      files: ["registry/example/use-hover-demo.tsx"],
+    },
+    "use-intersection-demo": {
+      name: "use-intersection",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-intersection-demo")
+      ),
+      files: ["registry/example/use-intersection-demo.tsx"],
+    },
+    "use-media-query-demo": {
+      name: "use-media-query",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-media-query-demo")
+      ),
+      files: ["registry/example/use-media-query-demo.tsx"],
+    },
+    "use-reduced-motion-demo": {
+      name: "use-reduced-motion",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-reduced-motion-demo")
+      ),
+      files: ["registry/example/use-reduced-motion-demo.tsx"],
+    },
+    "use-resize-observer-demo": {
+      name: "use-resize-observer",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-resize-observer-demo")
+      ),
+      files: ["registry/example/use-resize-observer-demo.tsx"],
+    },
+    "use-scroll-into-view-demo": {
+      name: "use-scroll-into-view",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-scroll-into-view-demo")
+      ),
+      files: ["registry/example/use-scroll-into-view-demo.tsx"],
+    },
+    "use-click-outside-event": {
+      name: "use-click-outside-event",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-click-outside-event")
+      ),
+      files: ["registry/example/use-click-outside-event.tsx"],
+    },
+    "use-clipboard-demo": {
+      name: "use-clipboard-demo",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-clipboard-demo")
+      ),
+      files: ["registry/example/use-clipboard-demo.tsx"],
+    },
+    "use-document-title-demo": {
+      name: "use-document-title-demo",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-document-title-demo")
+      ),
+      files: ["registry/example/use-document-title-demo.tsx"],
+    },
+    "use-document-visibility-demo": {
+      name: "use-document-visibility-demo",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-document-visibility-demo")
+      ),
+      files: ["registry/example/use-document-visibility-demo.tsx"],
+    },
+    "use-headroom-demo": {
+      name: "use-headroom-demo",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-headroom-demo")
+      ),
+      files: ["registry/example/use-headroom-demo.tsx"],
+    },
+    "use-network-demo": {
+      name: "use-network-demo",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-network-demo")
+      ),
+      files: ["registry/example/use-network-demo.tsx"],
+    },
+    "use-os-demo": {
+      name: "use-os-demo",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(() => import("@/registry/example/use-os-demo")),
+      files: ["registry/example/use-os-demo.tsx"],
+    },
+    "use-window-scroll-demo": {
+      name: "use-window-scroll-demo",
+      type: "hooks:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/use-window-scroll-demo")
+      ),
+      files: ["registry/example/use-window-scroll-demo.tsx"],
+    },
   },
 };

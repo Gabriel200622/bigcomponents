@@ -1,0 +1,42 @@
+---
+title: use-resize-observer
+component: false
+description: Subscribe to element size and position changes with ResizeObserver
+---
+
+## Usage
+
+<ComponentPreview name="use-resize-observer-demo" />
+
+## API
+
+Hook returns `ref` object that should be passed to the observed element, and the current element content rect, as returned by `ResizeObserver`'s callback `entry.contentRect`. See [Resize Observer API](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) documentation to learn more. On the first render (as well as during SSR), or when no element is being observed, all of the properties are equal to `0`.
+
+```tsx
+import { useResizeObserver } from "@bigcomponents/hooks";
+
+function Demo() {
+  const [ref, rect] = useResizeObserver();
+  return <div ref={ref}>Observed</div>;
+}
+```
+
+See also [use-element-size](/docs/hooks/use-element-size) hook in case you need to subscribe only to `width` and `height`.
+
+## Definition
+
+```tsx
+function useResizeObserver<T extends HTMLElement = any>(): [
+  MutableRefObject<T>,
+  {
+    x: number;
+    y: number;
+    top: number;
+    left: number;
+    right: number;
+    bottom: number;
+    height: number;
+    width: number;
+  },
+];
+```

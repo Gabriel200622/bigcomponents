@@ -32,7 +32,7 @@ const Header = () => {
               variant="link"
               className={cn(
                 "px-0",
-                pathname === "/docs/introduction" && "text-primary"
+                pathname === "/docs/introduction" && "text-primary",
               )}
               asChild
             >
@@ -43,7 +43,7 @@ const Header = () => {
               variant="link"
               className={cn(
                 "px-0",
-                pathname?.startsWith("/docs/components") && "text-primary"
+                pathname?.startsWith("/docs/components") && "text-primary",
               )}
               asChild
             >
@@ -54,7 +54,18 @@ const Header = () => {
               variant="link"
               className={cn(
                 "px-0",
-                pathname === "/templates" && "text-primary"
+                pathname?.startsWith("/docs/hooks") && "text-primary",
+              )}
+              asChild
+            >
+              <Link href="/docs/hooks">Hooks</Link>
+            </Button>
+
+            <Button
+              variant="link"
+              className={cn(
+                "px-0",
+                pathname === "/templates" && "text-primary",
               )}
               asChild
             >

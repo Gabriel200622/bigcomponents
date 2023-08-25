@@ -1,6 +1,6 @@
 ///// TODO /////
 
 - Improve the textarea component
-- Check the functionality of the useInputState hook
 - Add changeset
 - Add testing
+- Add <Table /> component

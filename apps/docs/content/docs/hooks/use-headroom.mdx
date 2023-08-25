@@ -1,0 +1,29 @@
+---
+title: use-headroom
+component: false
+description: Create headers that are hidden after user scrolls past given distance
+---
+
+## Usage
+
+Use `use-headroom` hook to create headers that are hidden after user scrolls past given distance in px. The hook returns a boolean value that determines whether element should be pinned or hidden. Hook returns `true` when current scroll position is less than specified `fixedAt` value and after user scrolled up.
+
+<ComponentPreview name="use-headroom-demo" />
+
+## Definition
+
+```tsx
+function useHeadroom(input?: {
+  /** Number in px at which element should be fixed */
+  fixedAt?: number;
+
+  /** Called when element is pinned */
+  onPin?(): void;
+
+  /** Called when element is at fixed position */
+  onFix?(): void;
+
+  /** Called when element is unpinned */
+  onRelease?(): void;
+}): boolean;
+```

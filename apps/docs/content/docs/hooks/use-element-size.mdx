@@ -1,0 +1,27 @@
+---
+title: use-element-size
+component: false
+description: Get element width and height and subscribe to changes
+---
+
+## Usage
+
+<ComponentPreview name="use-element-size-demo" />
+
+## API
+
+use-element-size is a simpler version of [use-resize-observer](/docs/hooks/use-resize-observer) hook. Hook returns `ref` object that should be passed to the observed element, and the element's `height` and `width`. On the first render (as well as during SSR), or when no element is being observed, `width` and `height` properties are equal to `0`.
+
+```tsx
+const { ref, width, height } = useElementSize();
+```
+
+## Definition
+
+```tsx
+function useElementSize<T extends HTMLElement = any>(): {
+  MutableRefObject<T>,
+  width: number,
+  height: number
+};
+```

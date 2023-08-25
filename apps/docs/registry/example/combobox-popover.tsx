@@ -60,7 +60,7 @@ const statuses: Status[] = [
 export default function ComboboxPopover() {
   const [open, setOpen] = React.useState(false);
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
-    null
+    null,
   );
 
   return (
@@ -95,7 +95,7 @@ export default function ComboboxPopover() {
                     onSelect={(value) => {
                       setSelectedStatus(
                         statuses.find((priority) => priority.value === value) ||
-                          null
+                          null,
                       );
                       setOpen(false);
                     }}
@@ -105,7 +105,7 @@ export default function ComboboxPopover() {
                         "mr-2 h-4 w-4",
                         status.value === selectedStatus?.value
                           ? "opacity-100"
-                          : "opacity-40"
+                          : "opacity-40",
                       )}
                     />
                     <span>{status.label}</span>

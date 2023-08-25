@@ -101,8 +101,8 @@ export default function CheckboxReactHookFormMultiple() {
                                 ? field.onChange([...field.value, item.id])
                                 : field.onChange(
                                     field.value?.filter(
-                                      (value) => value !== item.id
-                                    )
+                                      (value) => value !== item.id,
+                                    ),
                                   );
                             }}
                           />

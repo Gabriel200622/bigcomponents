@@ -1,0 +1,19 @@
+---
+title: use-document-title
+component: false
+description: Set document.title to given string
+---
+
+## Usage
+
+`use-document-title` sets `document.title` property with `React.useLayoutEffect` hook. Hook is not called during server side rendering. Use this hook with client only applications, for isomorphic use more advanced options, for example, [react-helmet](https://github.com/nfl/react-helmet).
+
+Call hook with string that should be set as document title inside any component. Hook is triggered every time value changes and value is not empty string (trailing whitespace is trimmed) or `null`.
+
+<ComponentPreview name="use-document-title-demo" />
+
+## Definition
+
+```tsx
+function useDocumentTitle(title: string): void;
+```

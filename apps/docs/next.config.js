@@ -13,8 +13,18 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/hooks",
+        destination: "/docs/hooks/use-debounced-state",
+        permanent: true,
+      },
+      {
         source: "/docs/components",
         destination: "/docs/components/accordion",
+        permanent: true,
+      },
+      {
+        source: "/docs/hooks",
+        destination: "/docs/hooks/use-debounced-state",
         permanent: true,
       },
       {

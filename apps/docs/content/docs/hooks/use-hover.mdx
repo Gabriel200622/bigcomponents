@@ -1,0 +1,18 @@
+---
+title: use-hover
+component: false
+description: Detect if mouse is over given element
+---
+
+## Usage
+
+<ComponentPreview name="use-hover-demo" />
+
+## Definition
+
+```tsx
+function useHover<T extends HTMLElement = HTMLDivElement>(): {
+  ref: React.MutableRefObject<T>;
+  hovered: boolean;
+};
+```

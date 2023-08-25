@@ -1,0 +1,24 @@
+---
+title: use-color-scheme
+component: false
+description: Detect user system color scheme with window.matchMedia API
+---
+
+## Usage
+
+use-color-scheme returns color scheme value i.e. either `dark` or `light`:
+
+<ComponentPreview name="use-color-scheme-demo" />
+
+Hook uses [use-media-query](/docs/hooks/use-media-query) hook under the hood. Hook relies on window.matchMedia() [API](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) and will always return `light` if the api is not available (e.g. during server side rendering) unless initial value is provided in first argument.
+
+## Definition
+
+```tsx
+function useColorScheme(
+  initialValue?: "dark" | "light",
+  options?: {
+    getInitialValueInEffect: boolean;
+  }
+): "dark" | "light";
+```

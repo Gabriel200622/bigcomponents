@@ -83,11 +83,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/installation/gatsby",
           items: [],
         },
-        {
-          title: "Manual",
-          href: "/docs/installation/manual",
-          items: [],
-        },
       ],
     },
     {
@@ -286,6 +281,166 @@ export const docsConfig: DocsConfig = {
         {
           title: "Tooltip",
           href: "/docs/components/tooltip",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Hooks",
+      items: [
+        {
+          title: "use-debounced-state",
+          href: "/docs/hooks/use-debounced-state",
+          items: [],
+        },
+        {
+          title: "use-debounced-value",
+          href: "/docs/hooks/use-debounced-value",
+          items: [],
+        },
+        {
+          title: "use-disclosure",
+          href: "/docs/hooks/use-disclosure",
+          items: [],
+        },
+        {
+          title: "use-idle",
+          href: "/docs/hooks/use-idle",
+          items: [],
+        },
+        {
+          title: "use-input-state",
+          href: "/docs/hooks/use-input-state",
+          items: [],
+        },
+        {
+          title: "use-interval",
+          href: "/docs/hooks/use-interval",
+          items: [],
+        },
+        {
+          title: "use-list-state",
+          href: "/docs/hooks/use-list-state",
+          items: [],
+        },
+        {
+          title: "use-local-storage",
+          href: "/docs/hooks/use-local-storage",
+          items: [],
+        },
+        {
+          title: "use-toggle",
+          href: "/docs/hooks/use-toggle",
+          items: [],
+        },
+        {
+          title: "use-click-outside",
+          href: "/docs/hooks/use-click-outside",
+          items: [],
+        },
+        {
+          title: "use-color-scheme",
+          href: "/docs/hooks/use-color-scheme",
+          items: [],
+        },
+        {
+          title: "use-element-size",
+          href: "/docs/hooks/use-element-size",
+          items: [],
+        },
+        {
+          title: "use-focus-trap",
+          href: "/docs/hooks/use-focus-trap",
+          items: [],
+        },
+        {
+          title: "use-fullscreen",
+          href: "/docs/hooks/use-fullscreen",
+          items: [],
+        },
+        {
+          title: "use-hotkeys",
+          href: "/docs/hooks/use-hotkeys",
+          items: [],
+        },
+        {
+          title: "use-hover",
+          href: "/docs/hooks/use-hover",
+          items: [],
+        },
+        {
+          title: "use-intersection",
+          href: "/docs/hooks/use-intersection",
+          items: [],
+        },
+        {
+          title: "use-media-query",
+          href: "/docs/hooks/use-media-query",
+          items: [],
+        },
+        {
+          title: "use-reduced-motion",
+          href: "/docs/hooks/use-reduced-motion",
+          items: [],
+        },
+        {
+          title: "use-resize-observer",
+          href: "/docs/hooks/use-resize-observer",
+          items: [],
+        },
+        {
+          title: "use-scroll-into-view",
+          href: "/docs/hooks/use-scroll-into-view",
+          items: [],
+        },
+        {
+          title: "use-clipboard",
+          href: "/docs/hooks/use-clipboard",
+          items: [],
+        },
+        {
+          title: "use-document-title",
+          href: "/docs/hooks/use-document-title",
+          items: [],
+        },
+        {
+          title: "use-document-visibility",
+          href: "/docs/hooks/use-document-visibility",
+          items: [],
+        },
+        {
+          title: "use-headroom",
+          href: "/docs/hooks/use-headroom",
+          items: [],
+        },
+        {
+          title: "use-merged-ref",
+          href: "/docs/hooks/use-merged-ref",
+          items: [],
+        },
+        {
+          title: "use-network",
+          href: "/docs/hooks/use-network",
+          items: [],
+        },
+        {
+          title: "use-os",
+          href: "/docs/hooks/use-os",
+          items: [],
+        },
+        {
+          title: "use-window-event",
+          href: "/docs/hooks/use-window-event",
+          items: [],
+        },
+        {
+          title: "use-window-scroll",
+          href: "/docs/hooks/use-window-scroll",
+          items: [],
+        },
+        {
+          title: "use-isomorphic-effect",
+          href: "/docs/hooks/use-isomorphic-effect",
           items: [],
         },
       ],

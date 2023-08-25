@@ -1,0 +1,92 @@
+---
+title: use-focus-trap
+component: false
+description: Trap focus inside given node
+---
+
+## Usage
+
+use-focus-trap traps focus at given node, for example in modal, drawer or menu. Node must include at least one focusable element. When node unmounts, focus trap is automatically disabled.
+
+```tsx
+import { useFocusTrap } from "@bigcomponents/hooks";
+
+function Demo() {
+  const focusTrapRef = useFocusTrap();
+
+  return (
+    <div ref={focusTrapRef}>
+      <input />
+    </div>
+  );
+}
+```
+
+## API
+
+Hook accepts focus trap active state as single argument:
+
+```tsx
+useFocusTrap(); // -> focus trap inactive
+useFocusTrap(true); // -> focus trap active
+
+useFocusTrap(false); // -> focus trap disabled
+```
+
+Hook returns `ref` that should be passed to dom node:
+
+```tsx
+const focusTrapRef = useFocusTrap();
+
+// With regular element:
+<div ref={focusTrapRef} />;
+```
+
+## Combine with other ref based hooks
+
+Usually focus trap is not used alone. To combine use-focus-trap hook with other ref based hooks use [use-merged-ref](/docs/hooks/use-merged-ref) hook:
+
+```tsx
+import { useRef } from "react";
+import {
+  useClickOutside,
+  useFocusTrap,
+  useMergedRef,
+} from "@bigcomponents/hooks";
+
+function Demo() {
+  const myRef = useRef();
+  const useClickOutsideRef = useClickOutside(() => {});
+  const focusTrapRef = useFocusTrap();
+  const mergedRef = useMergedRef(myRef, useClickOutsideRef, focusTrapRef);
+
+  return <div ref={mergedRef} />;
+}
+```
+
+## Initial focus
+
+By default, focus trap will move focus to first interactive element. To specify element that should receive initial focus add `data-autofocus` attribute, note that focus trap works with dom and this attribute should be added to element:
+
+```tsx
+import { useFocusTrap } from "@bigcomponents/hooks";
+
+function Demo() {
+  const focusTrapRef = useFocusTrap();
+
+  return (
+    <div ref={focusTrapRef}>
+      <input />
+      {/* Second input in modal will have initial focus */}
+      <input data-autofocus />
+      <input />
+    </div>
+  );
+}
+```
+
+## Definition
+
+```tsx
+function useFocusTrap(active?: boolean): (instance: HTMLElement) => void;
+```
