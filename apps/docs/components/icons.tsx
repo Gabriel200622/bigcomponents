@@ -1,4 +1,4 @@
-import { cn } from "@bigcomponents/core";
+import { cn } from "@/lib/utils";
 import { BoltIcon } from "@bigcomponents/core/heroicons/solid";
 
 type IconProps = React.HTMLAttributes<SVGElement>;
