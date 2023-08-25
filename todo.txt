@@ -4,3 +4,5 @@
 - Add changeset
 - Add testing
 - Add <Table /> component
+- Add <Portal /> component to the docs
+- Fix issue with tabs component in docs
