@@ -65,6 +65,6 @@ export function tabbable(element: HTMLElement) {
 
 export function findTabbableDescendants(element: HTMLElement): HTMLElement[] {
   return Array.from(
-    element.querySelectorAll<HTMLElement>(FOCUS_SELECTOR)
+    element.querySelectorAll<HTMLElement>(FOCUS_SELECTOR),
   ).filter(tabbable);
 }

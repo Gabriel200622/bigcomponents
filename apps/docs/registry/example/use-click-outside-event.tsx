@@ -10,7 +10,7 @@ export default function UseClickOutsideDemo() {
   useClickOutside(
     () => setOpened(false),
     ["mouseup", "touchend"],
-    [control, dropdown]
+    [control, dropdown],
   );
 
   return (

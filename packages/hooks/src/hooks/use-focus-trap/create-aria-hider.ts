@@ -7,12 +7,12 @@ type Value = {
 
 export function createAriaHider(
   containerNode: HTMLElement,
-  selector: string = "body > :not(script)"
+  selector: string = "body > :not(script)",
 ) {
   const id = randomId();
 
   const rootNodes: Value[] = Array.from<HTMLElement>(
-    document.querySelectorAll(selector)
+    document.querySelectorAll(selector),
   ).map((node) => {
     if (
       node?.shadowRoot?.contains(containerNode) ||

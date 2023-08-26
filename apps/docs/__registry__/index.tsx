@@ -22,7 +22,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["alert"],
       component: React.lazy(
-        () => import("@/registry/example/alert-destructive")
+        () => import("@/registry/example/alert-destructive"),
       ),
       files: ["registry/example/alert-destructive.tsx"],
     },
@@ -31,7 +31,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["alert-dialog", "button"],
       component: React.lazy(
-        () => import("@/registry/example/alert-dialog-demo")
+        () => import("@/registry/example/alert-dialog-demo"),
       ),
       files: ["registry/example/alert-dialog-demo.tsx"],
     },
@@ -40,7 +40,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["aspect-ratio"],
       component: React.lazy(
-        () => import("@/registry/example/aspect-ratio-demo")
+        () => import("@/registry/example/aspect-ratio-demo"),
       ),
       files: ["registry/example/aspect-ratio-demo.tsx"],
     },
@@ -77,7 +77,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["badge"],
       component: React.lazy(
-        () => import("@/registry/example/badge-destructive")
+        () => import("@/registry/example/badge-destructive"),
       ),
       files: ["registry/example/badge-destructive.tsx"],
     },
@@ -93,7 +93,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["button"],
       component: React.lazy(
-        () => import("@/registry/example/button-secondary")
+        () => import("@/registry/example/button-secondary"),
       ),
       files: ["registry/example/button-secondary.tsx"],
     },
@@ -102,7 +102,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["button"],
       component: React.lazy(
-        () => import("@/registry/example/button-destructive")
+        () => import("@/registry/example/button-destructive"),
       ),
       files: ["registry/example/button-destructive.tsx"],
     },
@@ -132,7 +132,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["button"],
       component: React.lazy(
-        () => import("@/registry/example/button-with-icon")
+        () => import("@/registry/example/button-with-icon"),
       ),
       files: ["registry/example/button-with-icon.tsx"],
     },
@@ -190,7 +190,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["checkbox"],
       component: React.lazy(
-        () => import("@/registry/example/checkbox-with-text")
+        () => import("@/registry/example/checkbox-with-text"),
       ),
       files: ["registry/example/checkbox-with-text.tsx"],
     },
@@ -199,7 +199,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["checkbox"],
       component: React.lazy(
-        () => import("@/registry/example/checkbox-disabled")
+        () => import("@/registry/example/checkbox-disabled"),
       ),
       files: ["registry/example/checkbox-disabled.tsx"],
     },
@@ -208,7 +208,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["checkbox", "form"],
       component: React.lazy(
-        () => import("@/registry/example/checkbox-form-multiple")
+        () => import("@/registry/example/checkbox-form-multiple"),
       ),
       files: ["registry/example/checkbox-form-multiple.tsx"],
     },
@@ -217,7 +217,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["checkbox", "form"],
       component: React.lazy(
-        () => import("@/registry/example/checkbox-form-single")
+        () => import("@/registry/example/checkbox-form-single"),
       ),
       files: ["registry/example/checkbox-form-single.tsx"],
     },
@@ -226,7 +226,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["collapsible"],
       component: React.lazy(
-        () => import("@/registry/example/collapsible-demo")
+        () => import("@/registry/example/collapsible-demo"),
       ),
       files: ["registry/example/collapsible-demo.tsx"],
     },
@@ -242,7 +242,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["combobox", "popover"],
       component: React.lazy(
-        () => import("@/registry/example/combobox-popover")
+        () => import("@/registry/example/combobox-popover"),
       ),
       files: ["registry/example/combobox-popover.tsx"],
     },
@@ -251,7 +251,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["command", "dropdown-menu", "button"],
       component: React.lazy(
-        () => import("@/registry/example/combobox-dropdown-menu")
+        () => import("@/registry/example/combobox-dropdown-menu"),
       ),
       files: ["registry/example/combobox-dropdown-menu.tsx"],
     },
@@ -281,7 +281,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["context-menu"],
       component: React.lazy(
-        () => import("@/registry/example/context-menu-demo")
+        () => import("@/registry/example/context-menu-demo"),
       ),
       files: ["registry/example/context-menu-demo.tsx"],
     },
@@ -297,7 +297,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["dropdown-menu"],
       component: React.lazy(
-        () => import("@/registry/example/dropdown-menu-demo")
+        () => import("@/registry/example/dropdown-menu-demo"),
       ),
       files: ["registry/example/dropdown-menu-demo.tsx"],
     },
@@ -306,7 +306,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["dropdown-menu", "checkbox"],
       component: React.lazy(
-        () => import("@/registry/example/dropdown-menu-checkboxes")
+        () => import("@/registry/example/dropdown-menu-checkboxes"),
       ),
       files: ["registry/example/dropdown-menu-checkboxes.tsx"],
     },
@@ -315,7 +315,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["dropdown-menu", "radio-group"],
       component: React.lazy(
-        () => import("@/registry/example/dropdown-menu-radio-group")
+        () => import("@/registry/example/dropdown-menu-radio-group"),
       ),
       files: ["registry/example/dropdown-menu-radio-group.tsx"],
     },
@@ -359,7 +359,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["input", "button", "label"],
       component: React.lazy(
-        () => import("@/registry/example/input-with-label")
+        () => import("@/registry/example/input-with-label"),
       ),
       files: ["registry/example/input-with-label.tsx"],
     },
@@ -368,7 +368,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["input", "button"],
       component: React.lazy(
-        () => import("@/registry/example/input-with-button")
+        () => import("@/registry/example/input-with-button"),
       ),
       files: ["registry/example/input-with-button.tsx"],
     },
@@ -391,7 +391,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["navigation-menu"],
       component: React.lazy(
-        () => import("@/registry/example/navigation-menu-demo")
+        () => import("@/registry/example/navigation-menu-demo"),
       ),
       files: ["registry/example/navigation-menu-demo.tsx"],
     },
@@ -414,7 +414,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["radio-group"],
       component: React.lazy(
-        () => import("@/registry/example/radio-group-demo")
+        () => import("@/registry/example/radio-group-demo"),
       ),
       files: ["registry/example/radio-group-demo.tsx"],
     },
@@ -423,7 +423,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["radio-group", "form"],
       component: React.lazy(
-        () => import("@/registry/example/radio-group-form")
+        () => import("@/registry/example/radio-group-form"),
       ),
       files: ["registry/example/radio-group-form.tsx"],
     },
@@ -432,7 +432,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["scroll-area"],
       component: React.lazy(
-        () => import("@/registry/example/scroll-area-demo")
+        () => import("@/registry/example/scroll-area-demo"),
       ),
       files: ["registry/example/scroll-area-demo.tsx"],
     },
@@ -518,7 +518,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["textarea"],
       component: React.lazy(
-        () => import("@/registry/example/textarea-disabled")
+        () => import("@/registry/example/textarea-disabled"),
       ),
       files: ["registry/example/textarea-disabled.tsx"],
     },
@@ -534,7 +534,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["textarea", "button"],
       component: React.lazy(
-        () => import("@/registry/example/textarea-with-button")
+        () => import("@/registry/example/textarea-with-button"),
       ),
       files: ["registry/example/textarea-with-button.tsx"],
     },
@@ -543,7 +543,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["textarea", "label"],
       component: React.lazy(
-        () => import("@/registry/example/textarea-with-label")
+        () => import("@/registry/example/textarea-with-label"),
       ),
       files: ["registry/example/textarea-with-label.tsx"],
     },
@@ -552,7 +552,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["textarea", "label"],
       component: React.lazy(
-        () => import("@/registry/example/textarea-with-text")
+        () => import("@/registry/example/textarea-with-text"),
       ),
       files: ["registry/example/textarea-with-text.tsx"],
     },
@@ -569,7 +569,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["toast"],
       component: React.lazy(
-        () => import("@/registry/example/toast-destructive")
+        () => import("@/registry/example/toast-destructive"),
       ),
       files: ["registry/example/toast-destructive.tsx"],
     },
@@ -585,7 +585,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["toast"],
       component: React.lazy(
-        () => import("@/registry/example/toast-with-action")
+        () => import("@/registry/example/toast-with-action"),
       ),
       files: ["registry/example/toast-with-action.tsx"],
     },
@@ -594,7 +594,7 @@ export const Index: Record<string, any> = {
       type: "components:example",
       registryDependencies: ["toast"],
       component: React.lazy(
-        () => import("@/registry/example/toast-with-title")
+        () => import("@/registry/example/toast-with-title"),
       ),
       files: ["registry/example/toast-with-title.tsx"],
     },
@@ -610,7 +610,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-debounced-state-demo")
+        () => import("@/registry/example/use-debounced-state-demo"),
       ),
       files: ["registry/example/use-debounced-state-demo.tsx"],
     },
@@ -619,7 +619,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-debounced-state-leading")
+        () => import("@/registry/example/use-debounced-state-leading"),
       ),
       files: ["registry/example/use-debounced-state-leading.tsx"],
     },
@@ -628,7 +628,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-debounced-value-demo")
+        () => import("@/registry/example/use-debounced-value-demo"),
       ),
       files: ["registry/example/use-debounced-value-demo.tsx"],
     },
@@ -637,7 +637,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-debounced-value-leading")
+        () => import("@/registry/example/use-debounced-value-leading"),
       ),
       files: ["registry/example/use-debounced-value-leading.tsx"],
     },
@@ -646,7 +646,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-debounced-value-cancel")
+        () => import("@/registry/example/use-debounced-value-cancel"),
       ),
       files: ["registry/example/use-debounced-value-cancel.tsx"],
     },
@@ -662,7 +662,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-interval-demo")
+        () => import("@/registry/example/use-interval-demo"),
       ),
       files: ["registry/example/use-interval-demo.tsx"],
     },
@@ -671,7 +671,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-list-state-demo")
+        () => import("@/registry/example/use-list-state-demo"),
       ),
       files: ["registry/example/use-list-state-demo.tsx"],
     },
@@ -687,7 +687,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-click-outside-demo")
+        () => import("@/registry/example/use-click-outside-demo"),
       ),
       files: ["registry/example/use-click-outside-demo.tsx"],
     },
@@ -696,7 +696,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-color-scheme-demo")
+        () => import("@/registry/example/use-color-scheme-demo"),
       ),
       files: ["registry/example/use-color-scheme-demo.tsx"],
     },
@@ -705,7 +705,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-element-size-demo")
+        () => import("@/registry/example/use-element-size-demo"),
       ),
       files: ["registry/example/use-element-size-demo.tsx"],
     },
@@ -714,7 +714,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-fullscreen-demo")
+        () => import("@/registry/example/use-fullscreen-demo"),
       ),
       files: ["registry/example/use-fullscreen-demo.tsx"],
     },
@@ -723,7 +723,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-fullscreen-custom-root")
+        () => import("@/registry/example/use-fullscreen-custom-root"),
       ),
       files: ["registry/example/use-fullscreen-custom-root.tsx"],
     },
@@ -732,7 +732,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-hotkeys-demo")
+        () => import("@/registry/example/use-hotkeys-demo"),
       ),
       files: ["registry/example/use-hotkeys-demo.tsx"],
     },
@@ -748,7 +748,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-intersection-demo")
+        () => import("@/registry/example/use-intersection-demo"),
       ),
       files: ["registry/example/use-intersection-demo.tsx"],
     },
@@ -757,7 +757,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-media-query-demo")
+        () => import("@/registry/example/use-media-query-demo"),
       ),
       files: ["registry/example/use-media-query-demo.tsx"],
     },
@@ -766,7 +766,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-reduced-motion-demo")
+        () => import("@/registry/example/use-reduced-motion-demo"),
       ),
       files: ["registry/example/use-reduced-motion-demo.tsx"],
     },
@@ -775,7 +775,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-resize-observer-demo")
+        () => import("@/registry/example/use-resize-observer-demo"),
       ),
       files: ["registry/example/use-resize-observer-demo.tsx"],
     },
@@ -784,7 +784,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-scroll-into-view-demo")
+        () => import("@/registry/example/use-scroll-into-view-demo"),
       ),
       files: ["registry/example/use-scroll-into-view-demo.tsx"],
     },
@@ -793,7 +793,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-click-outside-event")
+        () => import("@/registry/example/use-click-outside-event"),
       ),
       files: ["registry/example/use-click-outside-event.tsx"],
     },
@@ -802,7 +802,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-clipboard-demo")
+        () => import("@/registry/example/use-clipboard-demo"),
       ),
       files: ["registry/example/use-clipboard-demo.tsx"],
     },
@@ -811,7 +811,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-document-title-demo")
+        () => import("@/registry/example/use-document-title-demo"),
       ),
       files: ["registry/example/use-document-title-demo.tsx"],
     },
@@ -820,7 +820,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-document-visibility-demo")
+        () => import("@/registry/example/use-document-visibility-demo"),
       ),
       files: ["registry/example/use-document-visibility-demo.tsx"],
     },
@@ -829,7 +829,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-headroom-demo")
+        () => import("@/registry/example/use-headroom-demo"),
       ),
       files: ["registry/example/use-headroom-demo.tsx"],
     },
@@ -838,7 +838,7 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-network-demo")
+        () => import("@/registry/example/use-network-demo"),
       ),
       files: ["registry/example/use-network-demo.tsx"],
     },
@@ -854,9 +854,27 @@ export const Index: Record<string, any> = {
       type: "hooks:example",
       registryDependencies: [],
       component: React.lazy(
-        () => import("@/registry/example/use-window-scroll-demo")
+        () => import("@/registry/example/use-window-scroll-demo"),
       ),
       files: ["registry/example/use-window-scroll-demo.tsx"],
+    },
+    "custom-mode-toggle-next": {
+      name: "custom-mode-toggle-next",
+      type: "components:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/custom-mode-toggle-next"),
+      ),
+      files: ["registry/example/custom-mode-toggle-next.tsx"],
+    },
+    "custom-mode-toggle-react": {
+      name: "custom-mode-toggle-react",
+      type: "components:example",
+      registryDependencies: [],
+      component: React.lazy(
+        () => import("@/registry/example/custom-mode-toggle-react"),
+      ),
+      files: ["registry/example/custom-mode-toggle-react.tsx"],
     },
   },
 };

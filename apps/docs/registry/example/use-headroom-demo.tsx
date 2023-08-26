@@ -10,7 +10,7 @@ export default function UseHeadroomDemo() {
         <div
           className={cn(
             "fixed top-0 left-0 right-0 p-2 h-[60px] z-[9999] bg-accent transition-all",
-            pinned ? "translate-y-0" : "-translate-y-[60px]"
+            pinned ? "translate-y-0" : "-translate-y-[60px]",
           )}
         >
           Pinned header

@@ -98,6 +98,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/dark-mode/vite",
           items: [],
         },
+        {
+          title: "Custom mode toggle",
+          href: "/docs/dark-mode/custom-mode-toggle",
+          items: [],
+        },
       ],
     },
     {

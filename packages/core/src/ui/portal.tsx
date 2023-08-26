@@ -53,7 +53,7 @@ function Portal({
     <div className={cn(className)} {...others} ref={innerRef}>
       {children}
     </div>,
-    ref.current as Element | DocumentFragment
+    ref.current as Element | DocumentFragment,
   );
 }
 
