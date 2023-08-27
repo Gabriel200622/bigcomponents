@@ -288,6 +288,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/tooltip",
           items: [],
         },
+        {
+          title: "Portal",
+          href: "/docs/components/portal",
+          items: [],
+        },
       ],
     },
     {

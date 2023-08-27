@@ -5,8 +5,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allDocs } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
+import { DashboardTableOfContents } from "@/components/toc";
 import { siteConfig } from "@/config/site";
 import { absoluteUrl } from "@/lib/utils";
+import { ScrollArea } from "@bigcomponents/core";
+import { getTableOfContents } from "@/lib/toc";
 
 interface DocPageProps {
   params: {
@@ -68,22 +71,38 @@ const DocPage = async ({ params }: DocPageProps) => {
     notFound();
   }
 
+  const toc = await getTableOfContents(doc.body.raw);
+
   return (
-    <main className="p-4">
-      <div className="space-y-2">
-        <h1 className="text-4xl font-black tracking-tight text-primary scroll-m-20">
-          {doc.title}
-        </h1>
-        {doc.description && (
-          <p className="text-lg text-foreground">
-            <Balancer>{doc.description}</Balancer>
-          </p>
-        )}
+    <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+      <div className="mx-auto w-full min-w-0 p-4">
+        <div className="space-y-2">
+          <h1 className="text-4xl font-black tracking-tight text-primary scroll-m-20">
+            {doc.title}
+          </h1>
+          {doc.description && (
+            <p className="text-lg text-foreground">
+              <Balancer>{doc.description}</Balancer>
+            </p>
+          )}
+        </div>
+
+        <div className="pt-8 pb-12">
+          <Mdx code={doc.body.code} />
+        </div>
       </div>
 
-      <div className="pt-8 pb-12">
-        <Mdx code={doc.body.code} />
-      </div>
+      {doc.toc && (
+        <div className="hidden text-sm xl:block">
+          <div className="sticky top-16 -mt-10 pt-4">
+            <ScrollArea className="pb-10">
+              <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
+                <DashboardTableOfContents toc={toc} />
+              </div>
+            </ScrollArea>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
