@@ -133,7 +133,7 @@ importers:
   packages/core:
     dependencies:
       '@bigcomponents/hooks':
-        specifier: 0.0.4
+        specifier: latest
         version: link:../hooks
       '@heroicons/react':
         specifier: ^2.0.18
