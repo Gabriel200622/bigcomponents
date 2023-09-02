@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className="flex border-b bg-background items-center h-[60px] sticky top-0 z-50">
-      <div className="container flex items-center justify-between w-full px-2 mx-auto">
+      <div className="container flex items-center justify-between w-full gap-2 px-2 mx-auto">
         <div className="flex items-center gap-1 md:gap-10">
           <MobileSheet />
 
@@ -26,7 +26,11 @@ const Header = () => {
 
             <span className="hidden md:block">{siteConfig.name}</span>
           </Link>
+        </div>
 
+        <CommandMenu />
+
+        <div className="flex items-center gap-4">
           <div className="items-center hidden gap-4 md:flex">
             <Button
               variant="link"
@@ -78,10 +82,6 @@ const Header = () => {
               </Link>
             </Button>
           </div>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <CommandMenu />
 
           <div>
             <ModeToggle />

@@ -1,5 +1,5 @@
 import { Textarea } from "@bigcomponents/core";
 
 export default function TextareaDemo() {
-  return <Textarea placeholder="Type your message here." />;
+  return <Textarea className="resize" placeholder="Type your message here." />;
 }

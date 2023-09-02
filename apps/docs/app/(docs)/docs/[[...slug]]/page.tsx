@@ -6,7 +6,6 @@ import { notFound } from "next/navigation";
 import { allDocs } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
 import { DashboardTableOfContents } from "@/components/toc";
-import { siteConfig } from "@/config/site";
 import { absoluteUrl } from "@/lib/utils";
 import { ScrollArea } from "@bigcomponents/core";
 import { getTableOfContents } from "@/lib/toc";
@@ -75,7 +74,7 @@ const DocPage = async ({ params }: DocPageProps) => {
 
   return (
     <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
-      <div className="mx-auto w-full min-w-0 p-4">
+      <div className="w-full min-w-0 p-4 mx-auto">
         <div className="space-y-2">
           <h1 className="text-4xl font-black tracking-tight text-primary scroll-m-20">
             {doc.title}
@@ -94,7 +93,7 @@ const DocPage = async ({ params }: DocPageProps) => {
 
       {doc.toc && (
         <div className="hidden text-sm xl:block">
-          <div className="sticky top-16 -mt-10 pt-4">
+          <div className="sticky pt-4 -mt-10 top-16">
             <ScrollArea className="pb-10">
               <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
                 <DashboardTableOfContents toc={toc} />

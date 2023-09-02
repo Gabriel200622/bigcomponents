@@ -55,7 +55,7 @@ export default function TextareaForm() {
               <FormControl>
                 <Textarea
                   placeholder="Tell us a little bit about yourself"
-                  className="resize-none"
+                  className="resize"
                   {...field}
                 />
               </FormControl>

@@ -1,5 +1,11 @@
 import { Textarea } from "@bigcomponents/core";
 
 export default function TextareaDisabled() {
-  return <Textarea placeholder="Type your message here." disabled />;
+  return (
+    <Textarea
+      className="resize"
+      placeholder="Type your message here."
+      disabled
+    />
+  );
 }
