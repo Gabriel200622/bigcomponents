@@ -37,3 +37,6 @@ dist/
 
 # contentlayer
 .contentlayer
+
+# vscode
+.vscode
