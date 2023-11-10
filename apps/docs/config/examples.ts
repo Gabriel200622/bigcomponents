@@ -1,9 +1,9 @@
 import { siteConfig } from "./site";
 
-import ViteIMG from "../public/images/vite-template.png";
-import GatsbyIMG from "../public/images/gatsby-template.png";
+import ViteIMG from "../public/images/vite-example.png";
+import GatsbyIMG from "../public/images/gatsby-example.png";
 
-interface TemplateConfig {
+interface ExampleConfig {
   url: string;
   name: string;
   madeBy: string;
@@ -11,7 +11,7 @@ interface TemplateConfig {
   framework: "nextjs" | "vite" | "gatsby" | "cra";
 }
 
-export const templatesConfig: TemplateConfig[] = [
+export const examplesConfig: ExampleConfig[] = [
   {
     name: "Vite Boilerplate",
     framework: "vite",

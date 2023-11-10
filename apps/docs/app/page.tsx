@@ -9,7 +9,7 @@ const Home = () => {
       </h1>
 
       <div className="flex justify-center mt-10">
-        <Button asChild size="lg" className="text-lg text-white rounded-full">
+        <Button asChild size="lg" className="text-lg text-white">
           <Link href="/docs/introduction">Get started</Link>
         </Button>
       </div>

@@ -9,6 +9,7 @@ import { DashboardTableOfContents } from "@/components/toc";
 import { absoluteUrl } from "@/lib/utils";
 import { ScrollArea } from "@bigcomponents/core";
 import { getTableOfContents } from "@/lib/toc";
+import { DocsPager } from "@/components/pager";
 
 interface DocPageProps {
   params: {
@@ -89,6 +90,8 @@ const DocPage = async ({ params }: DocPageProps) => {
         <div className="pt-8 pb-12">
           <Mdx code={doc.body.code} />
         </div>
+
+        <DocsPager doc={doc} />
       </div>
 
       {doc.toc && (

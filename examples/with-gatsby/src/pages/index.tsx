@@ -13,7 +13,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="mt-10 text-2xl font-bold dark:text-gray-300">
-          Gatsby Template
+          Gatsby Example
         </h1>
 
         <Button className="mt-5 text-lg" asChild variant="link">

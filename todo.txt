@@ -1,10 +1,7 @@
 ///// TODO /////
 
-- Improve the textarea component
 - Add changeset
 - Add testing
 - Add <Table /> component
 - Add <PinInput /> component
 - Add <MultiSelect /> component
-- 
-

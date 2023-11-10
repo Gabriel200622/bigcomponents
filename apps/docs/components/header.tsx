@@ -2,18 +2,18 @@
 
 import Link from "next/link";
 import MobileSheet from "./mobile-sheet";
-import { ModeToggle } from "@bigcomponents/core/next";
 import { CommandMenu } from "./command-menu";
 import { cn, Button } from "@bigcomponents/core";
 import { siteConfig } from "@/config/site";
 import { Icons } from "./icons";
 import { usePathname } from "next/navigation";
+import { GitHubLogoIcon } from "@bigcomponents/core/radix";
 
 const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="flex border-b bg-background items-center h-[60px] sticky top-0 z-50">
+    <header className="flex border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 items-center h-[60px] sticky top-0 z-50">
       <div className="container flex items-center justify-between w-full gap-2 px-2 mx-auto">
         <div className="flex items-center gap-1 md:gap-10">
           <MobileSheet />
@@ -28,22 +28,20 @@ const Header = () => {
           </Link>
         </div>
 
-        <CommandMenu />
-
         <div className="flex items-center gap-4">
           <div className="items-center hidden gap-4 md:flex">
             <Button
               variant="link"
               className={cn(
                 "px-0",
-                pathname === "/docs/introduction" && "text-primary",
+                pathname === "/docs/introduction" && "text-primary"
               )}
               asChild
             >
               <Link href="/docs">Docs</Link>
             </Button>
 
-            <Button
+            {/* <Button
               variant="link"
               className={cn(
                 "px-0",
@@ -63,29 +61,24 @@ const Header = () => {
               asChild
             >
               <Link href="/docs/hooks">Hooks</Link>
-            </Button>
+            </Button> */}
 
             <Button
               variant="link"
-              className={cn(
-                "px-0",
-                pathname === "/templates" && "text-primary",
-              )}
+              className={cn("px-0", pathname === "/examples" && "text-primary")}
               asChild
             >
-              <Link href="/templates">Templates</Link>
+              <Link href="/examples">Examples</Link>
             </Button>
 
-            <Button variant="link" className="px-0" asChild>
-              <Link href={siteConfig.links.github} target="_blank">
-                Github
-              </Link>
-            </Button>
+            <CommandMenu />
+
+            <Link href={siteConfig.links.github} target="_blank">
+              <GitHubLogoIcon className="w-7 h-7" />
+            </Link>
           </div>
 
-          <div>
-            <ModeToggle />
-          </div>
+          <div>{/* <ModeToggle /> */}</div>
         </div>
       </div>
     </header>

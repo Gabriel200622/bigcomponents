@@ -7,7 +7,7 @@ function App() {
       <Header />
 
       <div className="flex flex-col items-center">
-        <h1 className="mt-10 text-2xl font-bold">Vite Template</h1>
+        <h1 className="mt-10 text-2xl font-bold">Vite Example</h1>
 
         <Button className="mt-5 text-lg" asChild variant="link">
           <a
