@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2016",
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "typeRoots": ["src/@types", "./node_modules/@types"],
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["DOM", "ESNext"],
+    "allowJs": true
+  }
+}
