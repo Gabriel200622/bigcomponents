@@ -1,10 +1,46 @@
-import { Server } from "@bigcomponents/server";
+import { EnvSchema, Server, Router } from "@bigcomponents/server";
 
-const server = new Server({
-  port: 4000,
-  features: ["morgan", "cookieParser"],
-});
+const main = async () => {
+  const { envs } = new EnvSchema({
+    PORT: {
+      type: "port",
+      required: true,
+    },
+    APP_URL: {
+      type: "string",
+      required: true,
+    },
+    CLIENT_URL: {
+      type: "string",
+      required: true,
+    },
+    API_VERSION: {
+      type: "string",
+      required: true,
+    },
+  });
 
-server.app.get("/", (_, res) => {
-  res.json({ msg: "Hello World!" });
-});
+  const mainRouter = new Router({
+    endpoints: [],
+    prefix: `/api/${envs.API_VERSION}`,
+  });
+
+  mainRouter.getEndpoints("/src/routers");
+
+  new Server({
+    port: envs.PORT,
+    router: mainRouter.router,
+    features: [
+      {
+        name: "cors",
+      },
+      {
+        name: "fileUpload",
+      },
+    ],
+  });
+};
+
+(() => {
+  main();
+})();
