@@ -2,9 +2,8 @@ import { Endpoint, Router } from "@bigcomponents/server";
 
 const authRouter = new Router({
   endpoints: [],
+  pathToEndpoints: "/src/api/auth",
 });
-
-authRouter.getEndpoints("/src/api/auth");
 
 export default new Endpoint({
   name: "Auth Router",

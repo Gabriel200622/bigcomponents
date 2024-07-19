@@ -9,11 +9,15 @@ export interface RouterArgs {
   /**
    * Endpoints
    */
-  endpoints: Endpoint[];
+  endpoints?: Endpoint[];
   /**
    * Prefix for the router
    */
   prefix?: string;
+  /**
+   * Path to endpoints directory
+   */
+  pathToEndpoints?: string;
 }
 
 /**
@@ -40,8 +44,12 @@ export class Router {
 
   constructor(args: RouterArgs) {
     this.router = ExpressRouter();
-    this.endpoints = args.endpoints;
+    this.endpoints = args.endpoints ?? [];
     this.prefix = args.prefix;
+
+    if (args.pathToEndpoints) {
+      this.getEndpoints(args.pathToEndpoints);
+    }
 
     this.loadEndpoints();
   }
@@ -49,7 +57,7 @@ export class Router {
   /**
    * Load endpoints from a directory
    */
-  public getEndpoints(path: string): void {
+  private getEndpoints(path: string): void {
     try {
       const dir = join(process.cwd(), path);
       const files = readdirSync(dir);

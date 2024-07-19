@@ -7,10 +7,14 @@ export type DefaultMethods = "get" | "post" | "put" | "delete";
 export type RouterMethod = "use";
 export type Method = DefaultMethods | RouterMethod;
 
-export interface EndpointSchema {
-  params?: z.ZodTypeAny | any;
-  body?: z.ZodTypeAny | any;
-  query?: z.ZodTypeAny | any;
+export interface EndpointSchema<
+  Params = z.ZodTypeAny,
+  Body = z.ZodTypeAny,
+  Query = z.ZodTypeAny,
+> {
+  body: Body;
+  params: Params;
+  query: Query;
 }
 
 interface EndpointConstructorArgsBase<
@@ -54,35 +58,35 @@ type EndpointConstructorArgs<
   | EndpointConstructorArgsDefault<T, P, ReqBody, ReqQuery>
   | EndpointConstructorArgsRouter<P, ReqBody, ReqQuery>;
 
-export class Endpoint<T extends EndpointSchema = any> {
+export class Endpoint<Schema extends EndpointSchema = any> {
   public name: string;
   public path: string;
   public method: Method;
   public router?: Router;
   public controller?: EndpointController<
-    z.infer<T["params"]>,
-    z.infer<T["body"]>,
-    z.infer<T["query"]>
+    z.infer<Schema["params"]>,
+    z.infer<Schema["body"]>,
+    z.infer<Schema["query"]>
   >;
   public middleware?:
     | EndpointController<
-        z.infer<T["params"]>,
-        z.infer<T["body"]>,
-        z.infer<T["query"]>
+        z.infer<Schema["params"]>,
+        z.infer<Schema["body"]>,
+        z.infer<Schema["query"]>
       >
     | EndpointController<
-        z.infer<T["params"]>,
-        z.infer<T["body"]>,
-        z.infer<T["query"]>
+        z.infer<Schema["params"]>,
+        z.infer<Schema["body"]>,
+        z.infer<Schema["query"]>
       >[];
-  public schema?: T;
+  public schema?: Schema;
 
   constructor(
     args: EndpointConstructorArgs<
-      T,
-      z.infer<T["params"]>,
-      z.infer<T["body"]>,
-      z.infer<T["query"]>
+      Schema,
+      z.infer<Schema["params"]>,
+      z.infer<Schema["body"]>,
+      z.infer<Schema["query"]>
     >
   ) {
     this.name = args.name;

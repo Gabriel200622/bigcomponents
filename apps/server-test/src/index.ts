@@ -21,11 +21,9 @@ const main = async () => {
   });
 
   const mainRouter = new Router({
-    endpoints: [],
     prefix: `/api/${envs.API_VERSION}`,
+    pathToEndpoints: "/src/routers",
   });
-
-  mainRouter.getEndpoints("/src/routers");
 
   new Server({
     port: envs.PORT,

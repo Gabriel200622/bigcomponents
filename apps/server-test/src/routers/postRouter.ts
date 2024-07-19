@@ -1,10 +1,8 @@
 import { Endpoint, Router } from "@bigcomponents/server";
 
 const postRouter = new Router({
-  endpoints: [],
+  pathToEndpoints: "/src/api/post",
 });
-
-postRouter.getEndpoints("/src/api/post");
 
 export default new Endpoint({
   name: "Post Router",

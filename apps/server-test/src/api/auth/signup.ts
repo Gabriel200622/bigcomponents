@@ -12,21 +12,22 @@ export default new Endpoint({
       email: Schema.string().email(),
       password: Schema.string(),
     }),
+    params: Schema.object({}),
+    query: Schema.object({}),
   },
-  middleware: checkAuth(),
+  middleware: checkAuth,
   controller: (req, res) => {
     const { name, username, email, password } = req.body;
-
-    console.log({
-      name,
-      username,
-      email,
-      password,
-    });
 
     return responseHandler({
       res,
       msg: "Signup",
+      data: {
+        name,
+        username,
+        email,
+        password,
+      },
     });
   },
 });

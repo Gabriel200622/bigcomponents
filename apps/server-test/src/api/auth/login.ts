@@ -1,4 +1,4 @@
-import { Endpoint, responseHandler, Schema } from "@bigcomponents/server";
+import { Endpoint, responseHandler } from "@bigcomponents/server";
 
 export default new Endpoint({
   name: "Login",
