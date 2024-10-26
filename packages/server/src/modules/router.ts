@@ -54,6 +54,35 @@ export class Router {
     this.loadEndpoints();
   }
 
+  public inArray(endpoint: Endpoint): boolean {
+    return this.endpoints.some((e) => e.name === endpoint.name);
+  }
+
+  public addEndpoint(endpoint: Endpoint): void {
+    if (!this.inArray(endpoint)) {
+      this.endpoints.push(endpoint);
+    }
+  }
+
+  public addRoute(endpoint: Endpoint): void {
+    this.addEndpoint(endpoint);
+
+    const path = this.prefix ? `${this.prefix}${endpoint.path}` : endpoint.path;
+
+    if (endpoint.method === "use") {
+      if (endpoint.router) {
+        this.router.use(path, endpoint.router.router);
+      }
+    } else {
+      this.router[endpoint.method](
+        path,
+        endpoint.validateReq(),
+        endpoint.middleware ?? this.defaultMiddleware(),
+        endpoint.controller ?? this.defaultEndpointController(endpoint)
+      );
+    }
+  }
+
   /**
    * Load endpoints from a directory
    */
@@ -66,7 +95,7 @@ export class Router {
         try {
           const endpoint = require(join(dir, file)).default;
           if (endpoint) {
-            this.endpoints.push(endpoint);
+            this.addEndpoint(endpoint);
           } else {
             console.warn(`No default export found in file: ${file}`);
           }
@@ -86,22 +115,7 @@ export class Router {
    */
   private loadEndpoints(): void {
     this.endpoints.forEach((endpoint) => {
-      const path = this.prefix
-        ? `${this.prefix}${endpoint.path}`
-        : endpoint.path;
-
-      if (endpoint.method === "use") {
-        if (endpoint.router) {
-          this.router.use(path, endpoint.router);
-        }
-      } else {
-        this.router[endpoint.method](
-          path,
-          endpoint.validateReq(),
-          endpoint.middleware ?? this.defaultMiddleware(),
-          endpoint.controller ?? this.defaultEndpointController(endpoint)
-        );
-      }
+      this.addRoute(endpoint);
     });
   }
 

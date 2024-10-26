@@ -1,7 +1,7 @@
 import { z } from "zod";
-import { Router } from "express";
 import { EndpointController, ParamsDictionary, Query } from "../types";
 import { responseHandler } from "../utils/response-handler";
+import { Router } from "./router";
 
 export type DefaultMethods = "get" | "post" | "put" | "delete";
 export type RouterMethod = "use";
@@ -16,6 +16,10 @@ export interface EndpointSchema<
   params: Params;
   query: Query;
 }
+
+export type InferOrDefault<T, Default> = T extends z.ZodTypeAny
+  ? z.infer<T>
+  : Default;
 
 interface EndpointConstructorArgsBase<
   P = ParamsDictionary,
